@@ -1,0 +1,34 @@
+{
+  "name": "express_server",
+  "version": "1.0.0",
+  "description": "expressJS HTTP server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/antonhibl/expressjs-server.git"
+  },
+  "keywords": [
+    "expressjs",
+    "javascript",
+    "http",
+    "web"
+  ],
+  "author": "Anton Hibl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antonhibl/expressjs-server/issues"
+  },
+  "homepage": "https://github.com/antonhibl/expressjs-server#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "typescript": "^4.6.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.16.0",
+    "@typescript-eslint/parser": "^5.16.0",
+    "eslint": "^8.12.0"
+  }
+}
