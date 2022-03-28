@@ -2,8 +2,13 @@
 var debug = require("console").debug;
 var express = require("express");
 var path = require("path");
+var fs = require('fs');
+var pug = require('pug');
 // Initialize an expressJS instance
 var app = express();
+// pug templating engine
+app.set('view engine', 'pug');
+app.set('views', './assets/views');
 // define port
 var PORT = Number(process.env.PORT) || 8000;
 // Establish file server in my assets dir
@@ -22,6 +27,17 @@ app.get("/teapot", function (req, res) {
 app.get("/blog/:postID", function (req, res) {
     // read in postID parameter
     var post_id = req.params.postID;
+    fs.readFile('./assets/db/'.concat(post_id).concat('.json'), 'utf-8', function (err, data) {
+        if (err) {
+            debug("Error retrieving blog data: ".concat(err));
+        }
+        else {
+            var blog_data = JSON.parse(data);
+            blog_data.main = blog_data.main.join();
+            // template data into HTML
+            res.render('blog_view', blog_data);
+        }
+    });
     // print which blog was served for logging and debugging
     debug("blog ".concat(post_id, " served"));
 });

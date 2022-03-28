@@ -1,0 +1,26 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        title antons blog
+        link(rel="stylesheet" href="/stylesheets/blog.css")
+        script(defer type="text/javascript" src="/scripts/blog.js")
+    body
+        h1#text-title= title
+        time#timestamp= timestamp
+        nav#site-nav(role="navigation")
+            ul#sitemap
+                li#homepage
+                    a(href="/documents/index.html")
+                li#teapot 
+                    a(href="/teapot")
+                li#last-post 
+                    a(href=last_str)
+                li#next-post
+                    a(href=next_str)
+        main(role="main")= main
+        footer#footer(role="contentinfo")
+            form#contact-form(role="form")
+                address Contact my by <a id="my-email" href="mailto:antonhibl11@gmail.com" class="my-email">e-mail</a>
+
+                    
