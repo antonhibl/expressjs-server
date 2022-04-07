@@ -24,8 +24,10 @@
   "homepage": "https://github.com/antonhibl/expressjs-server#readme",
   "dependencies": {
     "assemblyscript": "^0.20.2",
+    "domparser": "^0.1.1",
     "express": "^4.17.3",
     "fs": "^0.0.1-security",
+    "morgan": "^1.10.0",
     "pug": "^3.0.2",
     "typescript": "^4.6.3",
     "websockets": "^0.2.0"
