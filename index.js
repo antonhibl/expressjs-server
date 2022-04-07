@@ -48,7 +48,7 @@ app.get("/do_a_random", function (req, res) {
   res.send("Your number is: ".concat(Math.floor(Math.random() * 100) + 1));
 });
 
-app.post("/cs212/homework/8/madlib.html", function(req, res) {
+app.post("/cs212/homework/8/", function(req, res) {
   var madlib_form = req.body;
   var mad_array = new Array(12);
   
