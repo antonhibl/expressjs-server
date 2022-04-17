@@ -1,4 +1,13 @@
 var game_matrix;
+var refreshIntervalID;
+
+function start() {
+	refreshIntervalID = setInterval(iterate, 100);
+}
+
+function pause() {
+	clearInterval(refreshIntervalID);
+}
 
 function generate_board() {
     // grab gameboard table
@@ -90,7 +99,7 @@ function update_screen(game_matrix) {
                 var cell = document.getElementById(`${x}-${y}`);
                 cell.className = "on";
             } else {
-                var cell = document.getElementById(`${x}-${y}`);
+                cell = document.getElementById(`${x}-${y}`);
                 cell.className = "off";
             }
         }
@@ -111,8 +120,11 @@ function toggle_state() {
     }
 }
 
+var past_board = [];
+
 function iterate() {
     cloneboard = JSON.parse(JSON.stringify(game_matrix));
+	past_board.push(JSON.parse(JSON.stringify(game_matrix)));
     
     for(var x =0;x<22;x++) {
         for(var y = 0;y<22;y++) {
@@ -137,3 +149,7 @@ function iterate() {
     update_screen(game_matrix);
 }
 
+function backtrack() {
+	game_matrix = JSON.parse(JSON.stringify(past_board.pop()));
+	update_screen(game_matrix);
+}

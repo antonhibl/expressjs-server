@@ -14,10 +14,14 @@
     <body onload="generate_board()">
         <main role="main">
             <h1>Conway's Game of Life</h1>
+            <button onclick="start();">Start Life</button>
+            <button onclick="clear_board();">Clear Board</button>
+            <button onclick="backtrack();">Step Backwards</button>
+            <button onclick="pause();">Pause</button>
+            <button onclick="iterate();">Step Forward</button>
+            <p>Click to flip the tiles before/during the game!</p>
             <table id="gameboard">
             </table>
-            <button onclick="setInterval(iterate, 100);">Start Life</button>
-            <button onclick="clear_board();">Clear Board</button>
         </main>
         <script defer src="/scripts/life.js"></script>
     </body>
