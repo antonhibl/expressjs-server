@@ -27,9 +27,22 @@ h1 {
     width: auto;
     height: auto;
     text-align: center;
+	margin-bottom: 3%;
 }
 
 label {
     color:gainsboro;
     font-family: 'League Spartan', serif;
+	padding: 1%;
+	padding-right: 0px;
+}
+
+input {
+	margin: 1%;
+	margin-left: 0px;
+}
+
+label:hover {
+	color: slategrey;
+	font-family: 'League Spartan', serif;
 }

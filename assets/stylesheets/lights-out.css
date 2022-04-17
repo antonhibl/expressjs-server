@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&family=Libre+Baskerville&display=swap');
+
+html {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(35, 38, 47);
+}
+
+body {
+    display: grid;
+
+    width: auto;
+    height: 100%;
+
+    grid-template-areas:
+        "header game game"
+        "header game game"
+        "header game game";
+
+    grid-template-columns: 12% 75% 5%;
+    grid-template-rows: 20% 70% 5%;
+
+    margin: 1%;
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        display: grid;
+
+        width: auto;
+        height: 100%;
+    
+        grid-template-areas:
+            "header game game"
+            "header game game"
+            "header game game";
+    
+        grid-template-columns: 22% 75% 5%;
+        grid-template-rows: 20% 70% 5%;
+    
+        margin: 1%;
+    }
+}
+
+h1 {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: rgb(118, 233, 161);
+    font-size: 48px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: game;
+    width: 95%;
+    height: 100%;
+    align-self: center;
+}
+
+details > summary {
+    margin: 1%;
+    padding: 2%;
+    width: auto;
+    background-color: rgba(21, 21, 22, 0.6);
+    border: none;
+    color: whitesmoke;
+    box-shadow: 1px 1px 2px rgba(21, 21, 22, 0.8);
+    cursor: pointer;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 16px;
+}
+
+details > p {
+    background-color:rgba(21, 21, 22, 0.6);
+    width: auto;
+    padding: 2%;
+    margin: 1%;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 16px;
+    box-shadow: 1px 1px 2px rgba(21, 21, 22, 0.8);
+}
+
+a:link {
+    color: skyblue;
+}
+
+a:hover {
+    color: springgreen;
+}
+
+a:visited {
+    color: skyblue;
+}
+
+a:visited:hover {
+    color: springgreen;
+}
+
+button {
+	width: auto;
+	height: auto;
+	font-family: 'League Spartan', sans-serif;
+	padding: 1%;
+	margin: 5%;
+	justify-self: center;
+	align-self: center;
+}
+
+table {
+    width: 95%;
+    height: 100%;
+    background-color: rgba(30, 31, 39, 0.8);
+    margin: 1%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    border-radius: 7px;
+    box-shadow:inset 4px 4px 4px 4px rgba(27, 28, 37, 2);
+	padding: 1%;
+	border-spacing: 10px;
+}
+
+td {
+    background-color:whitesmoke;
+    transition: all 0.3s;
+	border-radius: 7px;
+	border-width: 5%;
+	border-style: ridge;
+	border-color: transparent;
+}
+
+td.on:active {
+    background-color: rgb(142, 251, 226) !important;
+	rotate: 50%;
+}
+
+td.off:active {
+    background-color: rgb(142, 251, 226) !important;
+	lighting-color;
+}
+
+td.on:hover {
+    background-color: rgba(236, 92, 130, 0.8);
+    transform: scale(0.9);
+    transform: scale(0.9);
+    border-style: ridge;
+    border-color: rgb(142, 251, 226);
+}
+
+td.off:hover {
+    background-color: rgba(141, 168, 249, 0.6);
+    transform: scale(0.9);
+    border-style: ridge;
+    border-color: rgb(142, 251, 226);
+}
+
+td.on {
+    background-color: rgba(239, 137, 78, 1);
+}
+
+td.off {
+    background-color: rgba(24, 23, 23, 0.9);
+	border-width: 4%;
+	border-color: rgba(255, 255, 255, 0.2);
+	border-style: ridge;
+}

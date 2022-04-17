@@ -43,6 +43,11 @@ app.get("/teapot", function (req, res) {
   debug("Brewing Tea...");
 });
 
+app.get("/cs212/final", function(req, res) {
+  // send the web page to the browser
+  res.render(`final`);
+});
+
 // do a random number function
 app.get("/do_a_random", function (req, res) {
   res.send("Your number is: ".concat(Math.floor(Math.random() * 100) + 1));
@@ -67,7 +72,7 @@ app.post("/cs212/homework/8/", function(req, res) {
       "scoop of ice cream. It filled my stomach. Afterwards I had to",
       "to catch our bus. When I got home I",
       "my mom for a",
-      "day at the zoo</p>",
+      "day at the zoo.</p>",
   ];
   
   story_array.splice(8, 0, mad_array[11]);
@@ -117,6 +122,10 @@ p {
 }
 .special {
 	color: springgreen;
+	font-style: normal;
+}
+.special:hover {
+	color: coral;
 	font-style: normal;
 }
 </style>`);
