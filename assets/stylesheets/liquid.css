@@ -233,6 +233,10 @@ em.my-name {
     font-style: normal;
 }
 
+em.my-name:hover {
+	color: rgb(141,252,226);
+}
+
 
 h1.main-hello {
     font-family: 'Raleway', sans-serif;
@@ -265,4 +269,12 @@ footer.contact-me-form {
 
 a.my-email {
     color:aqua;
+}
+
+a:hover {
+	color: rgb(236,92,130) !important;
+}
+
+a:visited {
+	color: rgb(141, 168, 249);
 }

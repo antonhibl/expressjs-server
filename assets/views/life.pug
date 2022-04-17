@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <title>Game of Life</title>
+        <meta name="description" content="JavaScript Game of Life">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Homepage">
+        <meta property="og:description" content="JavaScript Game of Life">
+        <link rel="stylesheet" href="/stylesheets/life.css">
+    </head>
+    <body onload="generate_board()">
+        <main role="main">
+            <h1>Conway's Game of Life</h1>
+            <table id="gameboard">
+            </table>
+            <button onclick="setInterval(iterate, 100);">Start Life</button>
+            <button onclick="clear_board();">Clear Board</button>
+        </main>
+        <script defer src="/scripts/life.js"></script>
+    </body>
+</html>

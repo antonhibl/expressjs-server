@@ -43,6 +43,10 @@ app.get("/teapot", function (req, res) {
   debug("Brewing Tea...");
 });
 
+app.get("/life", function(req, res) {
+	res.render("life");
+});
+
 app.get("/cs212/final", function(req, res) {
   // send the web page to the browser
   res.render(`final`);
